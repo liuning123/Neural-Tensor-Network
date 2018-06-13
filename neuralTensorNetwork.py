@@ -214,15 +214,15 @@ class NeuralTensorNetwork(object):
             e2 = data_batch['e2'][rel_i_list]
             e3 = data_batch['e3'][rel_i_list]
             
-            e1 = e1.astype(np.int64)
-            e2 = e2.astype(np.int64)
-            e3 = e3.astype(np.int64)
-
+            e1_int64 = e1.astype(np.int64)
+            e2_int64 = e2.astype(np.int64)
+            e3_int64 = e3.astype(np.int64)
+            
             """ Get entity vectors for examples of 'i'th relation """
 
-            entity_vectors_e1 = entity_vectors[:, e1.tolist()]
-            entity_vectors_e2 = entity_vectors[:, e2.tolist()]
-            entity_vectors_e3 = entity_vectors[:, e3.tolist()]
+            entity_vectors_e1 = entity_vectors[:, e1_int64.tolist()]
+            entity_vectors_e2 = entity_vectors[:, e2_int64.tolist()]
+            entity_vectors_e3 = entity_vectors[:, e3_int64.tolist()]
 
             """ Choose entity vectors and lists based on 'flip' """
 
