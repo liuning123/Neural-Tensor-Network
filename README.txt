@@ -1,3 +1,4 @@
+Fix a bug about data type in https://github.com/siddharth-agrawal/Neural-Tensor-Network
 -> This is an implementation of Neural Tensor Network, as mentioned in the following research paper:
    http://nlp.stanford.edu/~socherr/SocherChenManningNg_NIPS2013.pdf
 -> The code has been written in Python using Scipy and Numpy
