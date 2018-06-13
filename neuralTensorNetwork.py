@@ -213,6 +213,10 @@ class NeuralTensorNetwork(object):
             e1 = data_batch['e1'][rel_i_list]
             e2 = data_batch['e2'][rel_i_list]
             e3 = data_batch['e3'][rel_i_list]
+            
+            e1 = e1.astype(np.int64)
+            e2 = e2.astype(np.int64)
+            e3 = e3.astype(np.int64)
 
             """ Get entity vectors for examples of 'i'th relation """
 
@@ -748,6 +752,6 @@ def neuralTensorNetwork():
 
     """ Print accuracy of the obtained predictions """
 
-    print "Accuracy:", np.mean((predictions == test_labels))
+    print("Accuracy:", np.mean((predictions == test_labels)))
 
 neuralTensorNetwork()
