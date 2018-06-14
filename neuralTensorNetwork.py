@@ -724,7 +724,7 @@ def neuralTensorNetwork():
     for i in range(num_iterations):
 
         """ Create a training batch by picking up random samples from training data """
-
+        print "training step: ", i
         batch_indices = np.random.randint(num_examples, size = batch_size)
         data          = {}
         data['rel']   = np.tile(training_data[batch_indices, 1], (1, corrupt_size)).T
@@ -759,6 +759,6 @@ def neuralTensorNetwork():
 
     """ Print accuracy of the obtained predictions """
 
-    print("Accuracy:", np.mean((predictions == test_labels)))
+    print "Accuracy:", np.mean((predictions == test_labels))
 
 neuralTensorNetwork()
