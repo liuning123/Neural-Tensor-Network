@@ -1,6 +1,6 @@
 Fix a bug about data type in https://github.com/siddharth-agrawal/Neural-Tensor-Network
 Python:python2.7
-My experiment resulf of accuracy is 0.8051
+My experiment result of accuracy is 0.8051
 
 
 -> This is an implementation of Neural Tensor Network, as mentioned in the following research paper:
