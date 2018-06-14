@@ -511,6 +511,7 @@ class NeuralTensorNetwork(object):
             """ Extract required information from 'test_data' """
 
             rel = test_data[i, 1]
+            rel = rel.astype(np.int64)
             rel1 = test_data[i, 0].astype(np.int64)
             rel2 = test_data[i, 2].astype(np.int64)
             entity_vector_e1  = entity_vectors[:, rel1].reshape(self.embedding_size, 1)
